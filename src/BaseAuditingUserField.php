@@ -35,7 +35,7 @@ abstract class BaseAuditingUserField extends Field
     {
         $audit = $this->getAudit($resource);
 
-        if (empty($audit) || empty($audit->user_type) || empty($audit->user_id)) {
+        if (empty($audit) || empty($audit->user_type) || empty($audit->user_id) || empty($audit->user)) {
             return null;
         }
 
